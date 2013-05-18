@@ -9,4 +9,7 @@ Perl 实现天气预报，使用 中国气象局(http://www.cma.gov.cn/) 的天�
 ## 这个repo 还算是有点用吧？
 是滴～～
 
+## 为什么有时不能访问？
+服务器有时会挂
+
 _terry3 (tfguo369@gmail.com)
