@@ -48,11 +48,20 @@ $p1->setHandlers(
     );
 $p1->parse($weather_result->content);
 
+
+die "系统维护中" if is_crash(\@response);
+
 basic_info(\@response);
 today_weather(\@response);
 other_day_weather(\@response, 12);
 other_day_weather(\@response, 17);
 city_description(\@response);
+
+sub is_crash {
+  my $tmp = shift @_;
+  return 1 if $$tmp[0] eq "系统维护中！";
+  return 0;
+}
 
 sub city_description{
   my $city_des = shift @_;
